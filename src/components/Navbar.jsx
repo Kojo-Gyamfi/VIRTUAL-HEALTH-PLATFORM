@@ -15,6 +15,9 @@ const Navbar = () => {
             await auth.signOut();
             console.log('User logged out successfully');
             toast.success('Logged out successfully');
+            
+            // Clear any history manipulation and redirect to login
+            window.history.replaceState(null, null, '/');
             navigate('/');
         } catch (error) {
             console.error('Logout failed:', error);
