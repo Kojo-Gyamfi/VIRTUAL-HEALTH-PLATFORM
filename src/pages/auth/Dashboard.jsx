@@ -41,7 +41,7 @@ const Dashboard = () => {
                         </div>
 
                         <div>
-                            <button className="w-full md:flex bg-[#074250] text-white px-4 py-3 mb-4 rounded-md shadow-sm hover:bg-[#062f3c] transition-colors duration-300 hover:cursor-pointer">
+                            <button className="w-full md:flex bg-linear-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 mb-4 rounded-md shadow-sm hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 hover:cursor-pointer">
                                 Search
                             </button>
                         </div>
@@ -58,35 +58,35 @@ const Dashboard = () => {
                 </div>
 
                 <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mx-10 md:mx-8 md:px-18 lg:px-30 mt-10'>
-                    <button className='py-3 bg-[#074250] text-white rounded-md shadow-md cursor-pointer text-[10px] md:text-[16px] font-semibold hover:bg-[#062f3c] transition-colors duration-300'>
+                    <button className='py-3 bg-linear-to-r from-cyan-500 to-blue-500 text-white rounded-md shadow-md cursor-pointer text-[10px] md:text-[16px] font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300'>
                         Urology
                     </button>
 
-                    <button className='py-3 bg-[#074250] text-white rounded-md shadow-md cursor-pointer text-[10px] md:text-[16px] font-semibold hover:bg-[#062f3c] transition-colors duration-300'>
+                    <button className='py-3 bg-linear-to-r from-cyan-500 to-blue-500 text-white rounded-md shadow-md cursor-pointer text-[10px] md:text-[16px] font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300'>
                         Neurology
                     </button>
 
-                    <button className='py-3 bg-[#074250] text-white rounded-md shadow-md cursor-pointer text-[10px] md:text-[16px] font-semibold hover:bg-[#062f3c] transition-colors duration-300'>
+                    <button className='py-3 bg-linear-to-r from-cyan-500 to-blue-500 text-white rounded-md shadow-md cursor-pointer text-[10px] md:text-[16px] font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300'>
                         Orthopedic
                     </button>
 
-                    <button className='py-3 bg-[#074250] text-white rounded-md shadow-md cursor-pointer text-[10px] md:text-[16px] font-semibold hover:bg-[#062f3c] transition-colors duration-300'>
+                    <button className='py-3 bg-linear-to-r from-cyan-500 to-blue-500 text-white rounded-md shadow-md cursor-pointer text-[10px] md:text-[16px] font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300'>
                         Cardiologist
                     </button>
 
-                    <button className='py-3 bg-[#074250] text-white rounded-md shadow-md cursor-pointer text-[10px] md:text-[16px] font-semibold hover:bg-[#062f3c] transition-colors duration-300'>
+                    <button className='py-3 bg-linear-to-r from-cyan-500 to-blue-500 text-white rounded-md shadow-md cursor-pointer text-[10px] md:text-[16px] font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300'>
                         Dentist
                     </button>
 
-                    <button className='py-3 bg-[#074250] text-white rounded-md shadow-md cursor-pointer text-[10px] md:text-[16px] font-semibold hover:bg-[#062f3c] transition-colors duration-300'>
+                    <button className='py-3 bg-linear-to-r from-cyan-500 to-blue-500 text-white rounded-md shadow-md cursor-pointer text-[10px] md:text-[16px] font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300'>
                         Dermatologist
                     </button>
 
-                    <button className='py-3 bg-[#074250] text-white rounded-md shadow-md cursor-pointer text-[10px] md:text-[16px] font-semibold hover:bg-[#062f3c] transition-colors duration-300'>
+                    <button className='py-3 bg-linear-to-r from-cyan-500 to-blue-500 text-white rounded-md shadow-md cursor-pointer text-[10px] md:text-[16px] font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300'>
                         Pediatrics
                     </button>
 
-                    <button className='py-3 bg-[#074250] text-white rounded-md shadow-md cursor-pointer text-[10px] md:text-[16px] font-semibold hover:bg-[#062f3c] transition-colors duration-300'>
+                    <button className='py-3 bg-linear-to-r from-cyan-500 to-blue-500 text-white rounded-md shadow-md cursor-pointer text-[10px] md:text-[16px] font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300'>
                         Gynecologist
                     </button>
 
@@ -114,8 +114,8 @@ const Dashboard = () => {
                             <p className='text-gray-500 text-[13px]'>Experience: 10 years</p>
                             <p className='text-gray-500 text-[13px]'>Rating: 4.5/5 </p>
                             <div className='flex  '>
-                                <button className='mt-4 bg-none text-[13px] text-[#074250] mr-3 px-4 py-1 rounded border-2 border-[#074250] hover:bg-[#062f3c] hover:text-white transition duration-300 ease-in-out cursor-pointer'>Book Now</button>
-                                <button className='mt-4 bg-[#074250] text-[13px] text-white px-6 py-1 rounded hover:bg-[#062f3c] transition duration-300 ease-in-out cursor-pointer'>View Profile</button>
+                                <button className='mt-4 bg-none text-[13px] text-cyan-600 mr-3 px-4 py-1 rounded border-2 border-cyan-600 hover:bg-linear-to-r hover:from-cyan-500 hover:to-blue-500 hover:text-white hover:border-transparent transition-all duration-300 cursor-pointer'>Book Now</button>
+                                <button className='mt-4 bg-linear-to-r from-cyan-500 to-blue-500 text-[13px] text-white px-6 py-1 rounded hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 cursor-pointer'>View Profile</button>
                             </div>
                         </div>
 
@@ -129,8 +129,8 @@ const Dashboard = () => {
                             <p className='text-gray-500 text-[13px]'>Experience: 15 years</p>
                             <p className='text-gray-500 text-[13px] mb-5'>Rating: 4.7/5 </p>
                             <div className='flex  '>
-                                <button className='mt-4 bg-none text-[13px] text-[#074250] mr-3 px-4 py-1 rounded border-2 border-[#074250] hover:bg-[#062f3c] hover:text-white transition duration-300 ease-in-out cursor-pointer'>Book Now</button>
-                                <button className='mt-4 bg-[#074250] text-[13px] text-white px-6 py-1 rounded hover:bg-[#062f3c] transition duration-300 ease-in-out cursor-pointer'>View Profile</button>
+                                <button className='mt-4 bg-none text-[13px] text-cyan-600 mr-3 px-4 py-1 rounded border-2 border-cyan-600 hover:bg-linear-to-r hover:from-cyan-500 hover:to-blue-500 hover:text-white hover:border-transparent transition-all duration-300 cursor-pointer'>Book Now</button>
+                                <button className='mt-4 bg-linear-to-r from-cyan-500 to-blue-500 text-[13px] text-white px-6 py-1 rounded hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 cursor-pointer'>View Profile</button>
                             </div>
                         </div>
 
@@ -144,8 +144,8 @@ const Dashboard = () => {
                             <p className='text-gray-500 text-[13px]'>Experience: 9 years</p>
                             <p className='text-gray-500 text-[13px]'>Rating: 4.4/5 </p>
                             <div className='flex  '>
-                                <button className='mt-4 bg-none text-[13px] text-[#074250] mr-3 px-4 py-1 rounded border-2 border-[#074250] hover:bg-[#062f3c] hover:text-white transition duration-300 ease-in-out cursor-pointer'>Book Now</button>
-                                <button className='mt-4 bg-[#074250] text-[13px] text-white px-6 py-1 rounded hover:bg-[#062f3c] transition duration-300 ease-in-out cursor-pointer'>View Profile</button>
+                                <button className='mt-4 bg-none text-[13px] text-cyan-600 mr-3 px-4 py-1 rounded border-2 border-cyan-600 hover:bg-linear-to-r hover:from-cyan-500 hover:to-blue-500 hover:text-white hover:border-transparent transition-all duration-300 cursor-pointer'>Book Now</button>
+                                <button className='mt-4 bg-linear-to-r from-cyan-500 to-blue-500 text-[13px] text-white px-6 py-1 rounded hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 cursor-pointer'>View Profile</button>
                             </div>
                         </div>
 
@@ -159,8 +159,8 @@ const Dashboard = () => {
                             <p className='text-gray-500 text-[13px]'>Experience: 11 years</p>
                             <p className='text-gray-500 text-[13px]'>Rating: 4.6/5 </p>
                             <div className='flex  '>
-                                <button className='mt-4 bg-none text-[13px] text-[#074250] mr-3 px-4 py-1 rounded border-2 border-[#074250] hover:bg-[#062f3c] hover:text-white transition duration-300 ease-in-out cursor-pointer'>Book Now</button>
-                                <button className='mt-4 bg-[#074250] text-[13px] text-white px-6 py-1 rounded hover:bg-[#062f3c] transition duration-300 ease-in-out cursor-pointer'>View Profile</button>
+                                <button className='mt-4 bg-none text-[13px] text-cyan-600 mr-3 px-4 py-1 rounded border-2 border-cyan-600 hover:bg-linear-to-r hover:from-cyan-500 hover:to-blue-500 hover:text-white hover:border-transparent transition-all duration-300 cursor-pointer'>Book Now</button>
+                                <button className='mt-4 bg-linear-to-r from-cyan-500 to-blue-500 text-[13px] text-white px-6 py-1 rounded hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 cursor-pointer'>View Profile</button>
                             </div>
                         </div>
 
@@ -174,8 +174,8 @@ const Dashboard = () => {
                             <p className='text-gray-500 text-[13px]'>Experience: 10 years</p>
                             <p className='text-gray-500 text-[13px]'>Rating: 4.5/5 </p>
                             <div className='flex  '>
-                                <button className='mt-4 bg-none text-[13px] text-[#074250] mr-3 px-4 py-1 rounded border-2 border-[#074250] hover:bg-[#062f3c] hover:text-white transition duration-300 ease-in-out cursor-pointer'>Book Now</button>
-                                <button className='mt-4 bg-[#074250] text-[13px] text-white px-6 py-1 rounded hover:bg-[#062f3c] transition duration-300 ease-in-out cursor-pointer'>View Profile</button>
+                                <button className='mt-4 bg-none text-[13px] text-cyan-600 mr-3 px-4 py-1 rounded border-2 border-cyan-600 hover:bg-linear-to-r hover:from-cyan-500 hover:to-blue-500 hover:text-white hover:border-transparent transition-all duration-300 cursor-pointer'>Book Now</button>
+                                <button className='mt-4 bg-linear-to-r from-cyan-500 to-blue-500 text-[13px] text-white px-6 py-1 rounded hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 cursor-pointer'>View Profile</button>
                             </div>
                         </div>
 
@@ -189,8 +189,8 @@ const Dashboard = () => {
                             <p className='text-gray-500 text-[13px]'>Experience: 11 years</p>
                             <p className='text-gray-500 text-[13px]'>Rating: 4.6/5 </p>
                             <div className='flex  '>
-                                <button className='mt-4 bg-none text-[13px] text-[#074250] mr-3 px-4 py-1 rounded border-2 border-[#074250] hover:bg-[#062f3c] hover:text-white transition duration-300 ease-in-out cursor-pointer'>Book Now</button>
-                                <button className='mt-4 bg-[#074250] text-[13px] text-white px-6 py-1 rounded hover:bg-[#062f3c] transition duration-300 ease-in-out cursor-pointer'>View Profile</button>
+                                <button className='mt-4 bg-none text-[13px] text-cyan-600 mr-3 px-4 py-1 rounded border-2 border-cyan-600 hover:bg-linear-to-r hover:from-cyan-500 hover:to-blue-500 hover:text-white hover:border-transparent transition-all duration-300 cursor-pointer'>Book Now</button>
+                                <button className='mt-4 bg-linear-to-r from-cyan-500 to-blue-500 text-[13px] text-white px-6 py-1 rounded hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 cursor-pointer'>View Profile</button>
                             </div>
                         </div>
 
@@ -273,7 +273,7 @@ const Dashboard = () => {
                         placeholder="Enter your email"
                         className="w-full md:w-1/2 px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#ffffff] focus:border-[#ffffff] sm:text-sm"
                     />
-                    <button className="bg-[#ffffff] text-[#074250] px-6 py-3 rounded-md shadow-sm hover:bg-gray-200 transition-colors duration-300">
+                    <button className="bg-linear-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-md shadow-sm hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">
                         Subscribe
                     </button>
                 </div>

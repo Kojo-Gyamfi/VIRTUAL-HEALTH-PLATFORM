@@ -39,7 +39,7 @@ export default function ForgotPassword() {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="w-full py-3 bg-cyan-500 hover:bg-cyan-400 rounded-lg font-semibold shadow-md transition"
+          className="w-full py-3 bg-linear-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg font-semibold shadow-md transition-all duration-300"
         >
           Send Reset Link
         </motion.button>
