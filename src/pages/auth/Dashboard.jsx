@@ -7,14 +7,16 @@ import doctor3 from '../../assets/doctors/doctor-03.jpg'
 import doctor4 from '../../assets/doctors/doctor-04.jpg'
 import doctor5 from '../../assets/doctors/doctor-05.jpg'
 import doctor6 from '../../assets/doctors/doctor-06.jpg'
+import searchBg from '../../assets/search-bg.png'
 
 const Dashboard = () => {
     return (
         <div>
             <Navbar />
 
-            <section className='py-20 items-center justify-center md:bg-[url("./src/assets/search-bg.png")] md:bg-no-repeat md:bg-bottom md:bg-[length:100%_auto]'
+            <section className='py-20 items-center justify-center md:bg-no-repeat md:bg-bottom md:bg-[length:100%_auto]'
                 style={{
+                    backgroundImage: `url(${searchBg})`,
                     backgroundColor: "#f9f9f9",
                     minHeight: "400px",
                     paddingBottom: "20px",
