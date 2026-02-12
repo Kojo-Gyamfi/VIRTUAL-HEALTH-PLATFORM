@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function AuthBackground({ children }) {
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-900 via-blue-700 to-cyan-500 px-4 relative overflow-hidden">
+        <div className="flex items-center justify-center min-h-screen bg-linear-to-br from-blue-900 via-blue-700 to-cyan-500 px-4 relative overflow-hidden">
 
             {/* Floating Circles */}
             <motion.div

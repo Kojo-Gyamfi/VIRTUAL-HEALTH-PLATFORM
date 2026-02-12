@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import doctor1 from '../../assets/doctors/doctor-01.jpg'
@@ -10,17 +10,31 @@ import doctor6 from '../../assets/doctors/doctor-06.jpg'
 import searchBg from '../../assets/search-bg.png'
 
 const Dashboard = () => {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+        
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
     return (
         <div>
             <Navbar />
 
-            <section className='py-20 items-center justify-center md:bg-no-repeat md:bg-bottom md:bg-[length:100%_auto]'
+            <section className='py-20 items-center justify-center bg-no-repeat bg-bottom bg-cover'
                 style={{
-                    backgroundImage: `url(${searchBg})`,
-                    backgroundColor: "#f9f9f9",
+                    backgroundImage: isMobile ? 'linear-gradient(to bottom right, rgb(239 246 255), rgb(224 242 254), rgb(219 234 254))' : `url(${searchBg})`,
+                    backgroundColor: isMobile ? 'transparent' : '#f9f9f9',
+                    backgroundBlendMode: isMobile ? 'normal' : 'darken',
+                    backgroundSize: isMobile ? 'auto' : 'cover',
+                    backgroundPosition: 'center',
                     minHeight: "400px",
-                    paddingBottom: "20px",
-                    backgroundBlendMode: "darken"
+                    paddingBottom: "20px"
                 }}>
                 <div>
                     <div className='items-center justify-center mx-auto text-center'>

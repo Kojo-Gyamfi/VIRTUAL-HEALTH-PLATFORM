@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { auth } from '../Firebase/firebase'
 import { useNavigate, Link } from 'react-router-dom'
-import { MenuIcon, XIcon, LogOutIcon, UsersIcon, UserIcon, ShieldIcon } from 'lucide-react'
+import { MenuIcon, XIcon, LogOutIcon, UsersIcon, UserIcon, ShieldIcon, Activity } from 'lucide-react'
 import { toast } from 'react-toastify'
 
 const Navbar = () => {
@@ -61,9 +61,9 @@ const Navbar = () => {
                     <div className="flex justify-between items-center h-16">
                         {/* Logo */}
                         <div className="flex items-center">
-                            <Link to="/dashboard" className="flex items-center space-x-2">
-                                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
-                                    <span className="text-white font-bold text-lg">H</span>
+                            <Link to="/dashboard" className="flex items-center space-x-3">
+                                <div className="w-10 h-10 bg-linear-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-lg">
+                                    <Activity className="w-6 h-6 text-white" />
                                 </div>
                                 <h1 className="font-bold text-xl sm:text-2xl text-gray-800">
                                     Health-X
@@ -89,7 +89,7 @@ const Navbar = () => {
                         <div className="hidden md:flex items-center">
                             <button
                                 onClick={handleLogout}
-                                className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:scale-105 shadow-md hover:shadow-lg"
+                                className="flex items-center space-x-2 bg-linear-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:scale-105 shadow-md hover:shadow-lg"
                             >
                                 <LogOutIcon className="w-4 h-4" />
                                 <span>Logout</span>
@@ -141,7 +141,7 @@ const Navbar = () => {
                         <div className="pt-4 border-t border-gray-200">
                             <button
                                 onClick={handleLogout}
-                                className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-red-500 to-pink-500 text-white px-4 py-3 rounded-lg font-medium hover:from-red-600 hover:to-pink-600 transition-all duration-200 transform hover:scale-105 shadow-md hover:shadow-lg"
+                                className="w-full flex items-center justify-center space-x-2 bg-linear-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:scale-105 shadow-md hover:shadow-lg"
                             >
                                 <LogOutIcon className="w-4 h-4" />
                                 <span>Logout</span>
