@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import doctor1 from '../../assets/doctors/doctor-01.jpg'
@@ -10,31 +10,59 @@ import doctor6 from '../../assets/doctors/doctor-06.jpg'
 import searchBg from '../../assets/search-bg.png'
 
 const Dashboard = () => {
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-        const checkMobile = () => {
-            setIsMobile(window.innerWidth < 768);
-        };
-        
-        checkMobile();
-        window.addEventListener('resize', checkMobile);
-        
-        return () => window.removeEventListener('resize', checkMobile);
-    }, []);
     return (
         <div>
             <Navbar />
 
-            <section className='py-20 items-center justify-center bg-no-repeat bg-bottom bg-cover'
+            <section className='py-20 items-center justify-center bg-linear-to-br from-cyan-400 via-blue-500 to-purple-600 md:hidden'
                 style={{
-                    backgroundImage: isMobile ? 'linear-gradient(to bottom right, rgb(239 246 255), rgb(224 242 254), rgb(219 234 254))' : `url(${searchBg})`,
-                    backgroundColor: isMobile ? 'transparent' : '#f9f9f9',
-                    backgroundBlendMode: isMobile ? 'normal' : 'darken',
-                    backgroundSize: isMobile ? 'auto' : 'cover',
-                    backgroundPosition: 'center',
                     minHeight: "400px",
                     paddingBottom: "20px"
+                }}>
+                <div>
+                    <div className='items-center justify-center mx-auto text-center'>
+                        <h1 className='text-4xl mb-9 mx-4 font-extrabold font-weight-900 text-white'>
+                            Search Doctor, Make an Appointment
+                        </h1>
+                        <p className='font-semibold text-white/90 text-[16px] mx-5'>
+                            Discover the best doctors, clinic & hospital the city nearest to you.
+                        </p>
+                    </div>
+                    <div className="flex flex-col justify-center items-center mx-10 mt-10 gap-3">
+                        <div>
+                            <input
+                                type="text"
+                                placeholder="Search Locations(Eg. Kumasi, New York"
+                                className=" w-full md:px-4 px-11 py-3 border mb-4 border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#074250] focus:border-[#074250] sm:text-sm bg-white/90 backdrop-blur-sm"
+                            />
+                        </div>
+
+                        <div className='grow w-full'>
+                            <input
+                                type="text"
+                                placeholder="Search for doctors, clinics, or hospitals"
+                                className="w-full px-4 mb-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#074250] focus:border-[#074250] sm:text-sm bg-white/90 backdrop-blur-sm"
+                            />
+                        </div>
+
+                        <div className='w-full'>
+                            <button className="w-full bg-linear-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 mb-4 rounded-md shadow-sm hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 hover:cursor-pointer">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className='py-5 items-center justify-center mt-10 bg-cover bg-center bg-no-repeat hidden md:block'
+                style={{
+                    backgroundImage: 'url(' + searchBg + ')',
+                    backgroundColor: "#f9f9f9",
+                    minHeight: "400px",
+                    paddingBottom: "5px",
+                    backgroundBlendMode: "darken",
+                    backgroundSize: "contain",
+                    backgroundPosition: "center"
                 }}>
                 <div>
                     <div className='items-center justify-center mx-auto text-center'>
@@ -50,24 +78,23 @@ const Dashboard = () => {
                             <input
                                 type="text"
                                 placeholder="Search Locations"
-                                className=" w-full px-4 py-3 border mb-4 border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#074250] focus:border-[#074250] sm:text-sm"
+                                className=" w-full px-4 py-3 border mb-4 border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#074250] focus:border-[#074250] sm:text-sm bg-white/90 backdrop-blur-sm"
                             />
                         </div>
 
-                        <div className='flex-grow'>
+                        <div className='grow w-full'>
                             <input
                                 type="text"
                                 placeholder="Search for doctors, clinics, or hospitals"
-                                className="w-full px-4 mb-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#074250] focus:border-[#074250] sm:text-sm"
+                                className="w-full px-4 mb-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#074250] focus:border-[#074250] sm:text-sm bg-white/90 backdrop-blur-sm"
                             />
                         </div>
 
-                        <div>
-                            <button className="w-full md:flex bg-linear-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 mb-4 rounded-md shadow-sm hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 hover:cursor-pointer">
+                        <div className='w-full'>
+                            <button className="w-full bg-linear-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 mb-4 rounded-md shadow-sm hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 hover:cursor-pointer">
                                 Search
                             </button>
                         </div>
-
                     </div>
                 </div>
             </section>
