@@ -1,6 +1,12 @@
 import React from 'react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
+import doctor1 from '../../assets/doctors/doctor-01.jpg'
+import doctor2 from '../../assets/doctors/doctor-02.jpg'
+import doctor3 from '../../assets/doctors/doctor-03.jpg'
+import doctor4 from '../../assets/doctors/doctor-04.jpg'
+import doctor5 from '../../assets/doctors/doctor-05.jpg'
+import doctor6 from '../../assets/doctors/doctor-06.jpg'
 
 const Dashboard = () => {
     return (
@@ -105,8 +111,8 @@ const Dashboard = () => {
                         {/* Example doctor card */}
 
                         <div className='border p-4 rounded-lg shadow-md'>
-                            <div className='mb-5 rounded-[5px] bg-gray-200 h-48 flex items-center justify-center text-gray-500'>
-                                Doctor Image
+                            <div className='mb-5 rounded-[5px] overflow-hidden h-48'>
+                                <img src={doctor1} alt="Dr. Rebecca Kudabakim" className='w-full h-full object-cover' />
                             </div>
                             <h3 className='text-xl font-semibold'>Dr. Rebecca Kudabakim</h3>
                             <p className='text-gray-600 text-[14px] mt-3'>MDS - Periodontology and Oral Implantology, BDS</p>
@@ -120,8 +126,8 @@ const Dashboard = () => {
                         </div>
 
                         <div className='border p-4 rounded-lg shadow-md'>
-                            <div className='mb-5 rounded-[5px] bg-gray-200 h-48 flex items-center justify-center text-gray-500'>
-                                Doctor Image
+                            <div className='mb-5 rounded-[5px] overflow-hidden h-48'>
+                                <img src={doctor2} alt="Dr. Gyamfi Kwadwo" className='w-full h-full object-cover' />
                             </div>
                             <h3 className='text-xl font-semibold'>Dr. Gyamfi Kwadwo</h3>
                             <p className='text-gray-600 text-[14px] mt-3'>BDS, MDS - Oral & Maxillofacial Surgery</p>
@@ -135,8 +141,8 @@ const Dashboard = () => {
                         </div>
 
                         <div className='border p-4 rounded-lg shadow-md'>
-                            <div className='mb-5 rounded-[5px] bg-gray-200 h-48 flex items-center justify-center text-gray-500'>
-                                Doctor Image
+                            <div className='mb-5 rounded-[5px] overflow-hidden h-48'>
+                                <img src={doctor3} alt="Dr. Mary Aikens" className='w-full h-full object-cover' />
                             </div>
                             <h3 className='text-xl font-semibold'>Dr. Mary Aikens</h3>
                             <p className='text-gray-600 text-[14px] mt-3'>MBBS, MD - General Medicine, DNB - Cardiology</p>
@@ -150,8 +156,8 @@ const Dashboard = () => {
                         </div>
 
                         <div className='border p-4 rounded-lg shadow-md'>
-                            <div className='mb-5 rounded-[5px] bg-gray-200 h-48 flex items-center justify-center text-gray-500'>
-                                Doctor Image
+                            <div className='mb-5 rounded-[5px] overflow-hidden h-48'>
+                                <img src={doctor4} alt="Dr. Nicholas Deon" className='w-full h-full object-cover' />
                             </div>
                             <h3 className='text-xl font-semibold'>Dr. Nicholas Deon</h3>
                             <p className='text-gray-600 text-[14px] mt-3'>MBBS, MD - Dermatology , Venereology & Lepros</p>
@@ -165,8 +171,8 @@ const Dashboard = () => {
                         </div>
 
                         <div className='border p-4 rounded-lg shadow-md'>
-                            <div className='mb-5 rounded-[5px] bg-gray-200 h-48 flex items-center justify-center text-gray-500'>
-                                Doctor Image
+                            <div className='mb-5 rounded-[5px] overflow-hidden h-48'>
+                                <img src={doctor5} alt="Dr. Jacklyn Appiah" className='w-full h-full object-cover' />
                             </div>
                             <h3 className='text-xl font-semibold'>Dr. Jacklyn Appiah</h3>
                             <p className='text-gray-600 text-[14px] mt-3'>MS - Orthopaedics, MBBS, M.Ch - Orthopaedics</p>
@@ -180,8 +186,8 @@ const Dashboard = () => {
                         </div>
 
                         <div className='border p-4 rounded-lg shadow-md'>
-                            <div className='mb-5 rounded-[5px] bg-gray-200 h-48 flex items-center justify-center text-gray-500'>
-                                Doctor Image
+                            <div className='mb-5 rounded-[5px] overflow-hidden h-48'>
+                                <img src={doctor6} alt="Dr. Bright Amegah" className='w-full h-full object-cover' />
                             </div>
                             <h3 className='text-xl font-semibold'>Dr. Bright Amegah</h3>
                             <p className='text-gray-600 text-[14px] mt-3'>MBBS, MD - Ophthalmology, DNB - Ophthalmology</p>
