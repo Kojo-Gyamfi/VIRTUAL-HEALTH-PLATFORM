@@ -130,73 +130,93 @@ const RegisterPage = () => {
   return (
     <>
       <AuthBackground>
-        <div className="min-h-screen flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+        <div className="min-h-screen flex flex-col justify-center py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
           <motion.div
+            className="w-full max-w-md mx-auto"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-
-            className="sm:mx-auto sm:w-full sm:max-w-md">
-            <h2 className="mt-6 text-center text-3xl font-extrabold text-white">
-              Create a new account
-            </h2>
-            <p className="mt-2 text-center text-sm text-white">
-              Already have an account?{' '}
-              <Link
-                to="/login"
-                className="font-medium text-[#00CCCC] hover:cursor-pointer hover:text-[#65ffff] focus:outline-none"
-              >
-                Sign in here
-              </Link>
-            </p>
+          >
+            <div className="text-center mb-8">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">
+                Join Health-X
+              </h2>
+              <p className="text-base sm:text-lg text-gray-200">
+                Create your account to get started
+              </p>
+              <p className="mt-4 text-sm text-gray-300">
+                Already have an account?{' '}
+                <Link
+                  to="/login"
+                  className="font-medium text-cyan-300 hover:text-cyan-200 hover:underline focus:outline-none transition-colors duration-200"
+                >
+                  Sign in here
+                </Link>
+              </p>
+            </div>
           </motion.div>
 
-          <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="bg-white/10 backdrop-blur-lg rounded-2xl py-8 px-4 shadow sm:rounded-lg sm:px-10">
-
+          <motion.div
+            className="w-full max-w-md mx-auto"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+          >
+            <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 sm:p-8 shadow-2xl border border-white/20">
               {error && (
-                <div className="mb-4 bg-red-50 border-l-4 border-red-500 p-4">
-                  <div className="flex">
-                    <div className="flex-shrink-0">
-                      <svg className="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <motion.div
+                  className="mb-6 bg-red-500/20 border border-red-400/30 rounded-xl p-4"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="flex items-center">
+                    <div className="shrink-0">
+                      <svg className="h-5 w-5 text-red-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
                       </svg>
                     </div>
                     <div className="ml-3">
-                      <p className="text-sm text-red-700">{error}</p>
+                      <p className="text-sm text-red-200 font-medium">{error}</p>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               )}
 
               {errors.form && (
-                <div className="mb-4 bg-red-50 border-l-4 border-red-500 p-4">
-                  <div className="flex">
-                    <div className="flex-shrink-0">
-                      <svg className="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <motion.div
+                  className="mb-6 bg-red-500/20 border border-red-400/30 rounded-xl p-4"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="flex items-center">
+                    <div className="shrink-0">
+                      <svg className="h-5 w-5 text-red-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
                       </svg>
                     </div>
                     <div className="ml-3">
-                      <p className="text-sm text-red-700">{errors.form}</p>
+                      <p className="text-sm text-red-200 font-medium">{errors.form}</p>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               )}
 
               <form className="space-y-6" onSubmit={handleSubmit}>
                 <motion.div
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5 }}>
-                  <label htmlFor="username" className="block text-sm font-medium text-white">
+                  transition={{ duration: 0.5, delay: 0.2 }}>
+                  <label htmlFor="username" className="block text-sm font-semibold text-white mb-2">
                     Username
                   </label>
-                  <div className="mt-1">
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <svg className="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                      </svg>
+                    </div>
                     <input
                       id="username"
                       name="username"
@@ -205,12 +225,12 @@ const RegisterPage = () => {
                       autoComplete="username"
                       value={formData.username}
                       onChange={handleChange}
-                      className={`appearance-none block w-full px-3 py-2  ${errors.username ? 'border-red-300' : 'border-gray-300'} rounded-md shadow-sm placeholder-gray-300 bg-white/20 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition sm:text-sm`}
+                      className={`appearance-none block w-full pl-10 pr-3 py-3 rounded-xl placeholder-gray-400 bg-white/10 border ${errors.username ? 'border-red-400/50' : 'border-white/20'} focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 text-white`}
                     />
-                    {errors.username && (
-                      <p className="mt-2 text-sm text-red-700">{errors.username}</p>
-                    )}
                   </div>
+                  {errors.username && (
+                    <p className="mt-2 text-sm text-red-300 font-medium">{errors.username}</p>
+                  )}
                 </motion.div>
 
                 {/* this field is for usertype but disabled for now */}
@@ -236,12 +256,18 @@ const RegisterPage = () => {
                 <motion.div
                   initial={{ opacity: 0, x: 50 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                  <label htmlFor="email" className="block text-sm font-medium text-white">
-                    Email address
+                  <label htmlFor="email" className="block text-sm font-semibold text-white mb-2">
+                    Email Address
                   </label>
-                  <div className="mt-1">
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <svg className="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                      </svg>
+                    </div>
                     <input
                       id="email"
                       name="email"
@@ -250,23 +276,28 @@ const RegisterPage = () => {
                       autoComplete="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className={`appearance-none block w-full px-3 py-2 ${errors.email ? 'border-red-300' : 'border-gray-300'} rounded-md shadow-sm placeholder-gray-300  bg-white/20 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition sm:text-sm`}
+                      className={`appearance-none block w-full pl-10 pr-3 py-3 rounded-xl placeholder-gray-400 bg-white/10 border ${errors.email ? 'border-red-400/50' : 'border-white/20'} focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 text-white`}
                     />
-                    {errors.email && (
-                      <p className="mt-2 text-sm text-red-600">{errors.email}</p>
-                    )}
                   </div>
+                  {errors.email && (
+                    <p className="mt-2 text-sm text-red-300 font-medium">{errors.email}</p>
+                  )}
                 </motion.div>
 
                 <motion.div
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
                 >
-                  <label htmlFor="password" className="block text-sm font-medium text-white">
+                  <label htmlFor="password" className="block text-sm font-semibold text-white mb-2">
                     Password
                   </label>
-                  <div className="mt-1">
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <svg className="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
                     <input
                       id="password"
                       name="password"
@@ -275,22 +306,27 @@ const RegisterPage = () => {
                       autoComplete="new-password"
                       value={formData.password}
                       onChange={handleChange}
-                      className={`appearance-none block w-full px-3 py-2 ${errors.password ? 'border-red-300' : 'border-gray-300'} rounded-md shadow-sm placeholder-gray-300 bg-white/20 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition sm:text-sm`}
+                      className={`appearance-none block w-full pl-10 pr-3 py-3 rounded-xl placeholder-gray-400 bg-white/10 border ${errors.password ? 'border-red-400/50' : 'border-white/20'} focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 text-white`}
                     />
-                    {errors.password && (
-                      <p className="mt-2 text-sm text-red-600">{errors.password}</p>
-                    )}
                   </div>
+                  {errors.password && (
+                    <p className="mt-2 text-sm text-red-300 font-medium">{errors.password}</p>
+                  )}
                 </motion.div>
 
                 <motion.div
                   initial={{ opacity: 0, x: 50 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5 }}>
-                  <label htmlFor="confirmPassword" className="block text-sm font-medium text-white">
+                  transition={{ duration: 0.5, delay: 0.5 }}>
+                  <label htmlFor="confirmPassword" className="block text-sm font-semibold text-white mb-2">
                     Confirm Password
                   </label>
-                  <div className="mt-1">
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <svg className="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
                     <input
                       id="confirmPassword"
                       name="confirmPassword"
@@ -299,23 +335,25 @@ const RegisterPage = () => {
                       autoComplete="new-password"
                       value={formData.confirmPassword}
                       onChange={handleChange}
-                      className={`appearance-none block w-full px-3 py-2 ${errors.confirmPassword ? 'border-red-300' : 'border-gray-300'} rounded-md shadow-sm placeholder-gray-300 bg-white/20 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition sm:text-sm`}
+                      className={`appearance-none block w-full pl-10 pr-3 py-3 rounded-xl placeholder-gray-400 bg-white/10 border ${errors.confirmPassword ? 'border-red-400/50' : 'border-white/20'} focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 text-white`}
                     />
-                    {errors.confirmPassword && (
-                      <p className="mt-2 text-sm text-red-600">{errors.confirmPassword}</p>
-                    )}
                   </div>
+                  {errors.confirmPassword && (
+                    <p className="mt-2 text-sm text-red-300 font-medium">{errors.confirmPassword}</p>
+                  )}
                 </motion.div>
 
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 0.5, delay: 0.6 }}
                 >
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white  bg-cyan-500 hover:bg-cyan-400 hover:cursor-pointer focus:outline-none ${isLoading ? 'opacity-70 cursor-not-allowed' : ''}`}
+                    className={`w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-xl text-base font-semibold text-white bg-linear-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg ${
+                      isLoading ? 'opacity-70 cursor-not-allowed' : ''
+                    }`}
                   >
                     {isLoading ? (
                       <>
@@ -323,14 +361,14 @@ const RegisterPage = () => {
                           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
-                        Registering...
+                        Creating Account...
                       </>
-                    ) : 'Register'}
+                    ) : 'Create Account'}
                   </button>
                 </motion.div>
               </form>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </AuthBackground >
     </>

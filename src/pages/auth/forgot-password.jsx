@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function ForgotPassword() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-900 via-blue-700 to-cyan-500 px-4">
+    <div className="flex items-center justify-center min-h-screen bg-linear-to-br from-blue-900 via-blue-700 to-cyan-500 px-4">
       
       {/* Card Container */}
       <motion.div
@@ -51,9 +52,9 @@ export default function ForgotPassword() {
           className="mt-6 text-sm text-gray-200"
         >
           Remember your password?{" "}
-          <a href="/login" className="text-cyan-300 hover:underline">
+          <Link to="/login" className="text-cyan-300 hover:underline">
             Back to Login
-          </a>
+          </Link>
         </motion.div>
       </motion.div>
     </div>

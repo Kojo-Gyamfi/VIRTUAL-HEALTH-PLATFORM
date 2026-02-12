@@ -1,17 +1,7 @@
 import React from 'react'
 import { auth } from '../Firebase/firebase'
-import { useNavigate } from 'react-router-dom'
-import { Link } from '@radix-ui/react-navigation-menu'
+import { useNavigate, Link } from 'react-router-dom'
 import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from 'lucide-react'
-import {
-    NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu'
 import { toast } from 'react-toastify'
 
 
@@ -59,165 +49,10 @@ const Navbar = () => {
                 <h1 className='font-bold text-[18px] pl-3'>Health - X</h1>
             </div>
 
-            <div className=''>
-
-                <NavigationMenu viewport={false}>
-                    <NavigationMenuList>
-
-                        <div className='hidden md:flex '>
-                            <NavigationMenuItem>
-                                <NavigationMenuTrigger>Doctors</NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <ul className="grid w-[200px] gap-4">
-                                        <li>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Doctor Dashboard</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Appointments</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Schedule Timing</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Patients List</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Chat</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Invoices</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Reviews</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Profile Settings</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Doctor Register</Link>
-                                            </NavigationMenuLink>
-                                        </li>
-                                    </ul>
-                                </NavigationMenuContent>
-                            </NavigationMenuItem>
-
-                            <NavigationMenuItem>
-                                <NavigationMenuTrigger>Patients</NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <ul className="grid w-[200px] gap-4">
-                                        <li>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Search Doctor</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Doctor Profile</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Bookng</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Checkout</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Booking Success</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Patient Dashboard</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Favourites</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Chat</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Profile Settings</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Change Password</Link>
-                                            </NavigationMenuLink>
-                                        </li>
-                                    </ul>
-                                </NavigationMenuContent>
-                            </NavigationMenuItem>
-
-                            <NavigationMenuItem>
-                                <NavigationMenuTrigger>Pages</NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <ul className="grid w-[200px] gap-4">
-                                        <li>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Voice Call</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Video Call</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Search Doctors</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Calendar</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Components</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Invoices</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Starter Page</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Login</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Register</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Forgot Password</Link>
-                                            </NavigationMenuLink>
-                                        </li>
-                                    </ul>
-                                </NavigationMenuContent>
-                            </NavigationMenuItem>
-
-                            <NavigationMenuItem>
-                                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                                    <Link href="#">Admin</Link>
-                                </NavigationMenuLink>
-                            </NavigationMenuItem>
-                        </div>
-
-                        {/* <div className='md:hidden inline-block items-center justify-between '>
-                            <NavigationMenuItem>
-                                <NavigationMenuTrigger>Menu</NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <ul className="grid w-[200px] gap-4">
-                                        <li>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Doctors</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Patients</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Pages</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Admin</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">Contacts</Link>
-                                            </NavigationMenuLink>
-                                        </li>
-                                    </ul>
-                                </NavigationMenuContent>
-                            </NavigationMenuItem>
-                        </div> */}
-
-                    </NavigationMenuList>
-                </NavigationMenu>
+            <div className='flex items-center space-x-6'>
+                <Link to="/doctors" className="text-gray-600 hover:text-gray-900 transition">Doctors</Link>
+                <Link to="/patients" className="text-gray-600 hover:text-gray-900 transition">Patients</Link>
+                <Link to="/admin" className="text-gray-600 hover:text-gray-900 transition">Admin</Link>
             </div>
 
 

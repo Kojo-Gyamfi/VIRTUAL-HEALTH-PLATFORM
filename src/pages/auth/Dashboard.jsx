@@ -105,8 +105,9 @@ const Dashboard = () => {
                         {/* Example doctor card */}
 
                         <div className='border p-4 rounded-lg shadow-md'>
-                            <img src="../src/assets/doctors/doctor-01.jpg" alt="Doctor-Image"
-                                className='mb-5 rounded-[5px]' />
+                            <div className='mb-5 rounded-[5px] bg-gray-200 h-48 flex items-center justify-center text-gray-500'>
+                                Doctor Image
+                            </div>
                             <h3 className='text-xl font-semibold'>Dr. Rebecca Kudabakim</h3>
                             <p className='text-gray-600 text-[14px] mt-3'>MDS - Periodontology and Oral Implantology, BDS</p>
                             <p className='text-gray-500 text-[13px] mt-3'>New York, USA</p>
@@ -119,10 +120,11 @@ const Dashboard = () => {
                         </div>
 
                         <div className='border p-4 rounded-lg shadow-md'>
-                            <img src="../src/assets/doctors/doctor-02.jpg" alt="Doctor-Image"
-                                className='mb-5 rounded-[5px]' />
+                            <div className='mb-5 rounded-[5px] bg-gray-200 h-48 flex items-center justify-center text-gray-500'>
+                                Doctor Image
+                            </div>
                             <h3 className='text-xl font-semibold'>Dr. Gyamfi Kwadwo</h3>
-                            <p className='text-gray-600 text-[14px] mt-3'>BDS, MDS - Oral &amp; Maxillofacial Surgery</p>
+                            <p className='text-gray-600 text-[14px] mt-3'>BDS, MDS - Oral & Maxillofacial Surgery</p>
                             <p className='text-gray-500 text-[13px] mt-3'>New York, USA</p>
                             <p className='text-gray-500 text-[13px]'>Experience: 15 years</p>
                             <p className='text-gray-500 text-[13px] mb-5'>Rating: 4.7/5 </p>
@@ -133,8 +135,9 @@ const Dashboard = () => {
                         </div>
 
                         <div className='border p-4 rounded-lg shadow-md'>
-                            <img src="../src/assets/doctors/doctor-04.jpg" alt="Doctor-Image"
-                                className='mb-5 rounded-[5px]' />
+                            <div className='mb-5 rounded-[5px] bg-gray-200 h-48 flex items-center justify-center text-gray-500'>
+                                Doctor Image
+                            </div>
                             <h3 className='text-xl font-semibold'>Dr. Mary Aikens</h3>
                             <p className='text-gray-600 text-[14px] mt-3'>MBBS, MD - General Medicine, DNB - Cardiology</p>
                             <p className='text-gray-500 text-[13px] mt-3'>New York, USA</p>
@@ -147,10 +150,11 @@ const Dashboard = () => {
                         </div>
 
                         <div className='border p-4 rounded-lg shadow-md'>
-                            <img src="../src/assets/doctors/doctor-08.jpg" alt="Doctor-Image"
-                                className='mb-5 rounded-[5px]' />
+                            <div className='mb-5 rounded-[5px] bg-gray-200 h-48 flex items-center justify-center text-gray-500'>
+                                Doctor Image
+                            </div>
                             <h3 className='text-xl font-semibold'>Dr. Nicholas Deon</h3>
-                            <p className='text-gray-600 text-[14px] mt-3'>MBBS, MD - Dermatology , Venereology &amp; Lepros</p>
+                            <p className='text-gray-600 text-[14px] mt-3'>MBBS, MD - Dermatology , Venereology & Lepros</p>
                             <p className='text-gray-500 text-[13px] mt-3'>New York, USA</p>
                             <p className='text-gray-500 text-[13px]'>Experience: 11 years</p>
                             <p className='text-gray-500 text-[13px]'>Rating: 4.6/5 </p>
@@ -161,8 +165,9 @@ const Dashboard = () => {
                         </div>
 
                         <div className='border p-4 rounded-lg shadow-md'>
-                            <img src="../src/assets/doctors/doctor-03.jpg" alt="Doctor-Image"
-                                className='mb-5 rounded-[5px]' />
+                            <div className='mb-5 rounded-[5px] bg-gray-200 h-48 flex items-center justify-center text-gray-500'>
+                                Doctor Image
+                            </div>
                             <h3 className='text-xl font-semibold'>Dr. Jacklyn Appiah</h3>
                             <p className='text-gray-600 text-[14px] mt-3'>MS - Orthopaedics, MBBS, M.Ch - Orthopaedics</p>
                             <p className='text-gray-500 text-[13px] mt-3'>New York, USA</p>
@@ -175,8 +180,9 @@ const Dashboard = () => {
                         </div>
 
                         <div className='border p-4 rounded-lg shadow-md'>
-                            <img src="../src/assets/doctors/doctor-09.jpg" alt="Doctor-Image"
-                                className='mb-5 rounded-[5px]' />
+                            <div className='mb-5 rounded-[5px] bg-gray-200 h-48 flex items-center justify-center text-gray-500'>
+                                Doctor Image
+                            </div>
                             <h3 className='text-xl font-semibold'>Dr. Bright Amegah</h3>
                             <p className='text-gray-600 text-[14px] mt-3'>MBBS, MD - Ophthalmology, DNB - Ophthalmology</p>
                             <p className='text-gray-500 text-[13px] mt-3'>New York, USA</p>
